@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Card: FC<Props> = ({ alignment = "center" }) => {
-  return <article className={`card card--${alignment}`}>Test</article>;
+  return <article className={`card card--${alignment}`}></article>;
 };
 
 export default Card;
