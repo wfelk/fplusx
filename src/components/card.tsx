@@ -1,7 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Card = () => {
-  return <article className="card">Test</article>;
+interface Props {
+  alignment?: "center" | "left" | "right";
+}
+
+const Card: FC<Props> = ({ alignment = "center" }) => {
+  return <article className={`card card--${alignment}`}>Test</article>;
 };
 
 export default Card;

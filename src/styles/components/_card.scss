@@ -1,7 +1,26 @@
+$card__border-radius: 5rem;
+
 .card {
+  position: relative;
+  width: 80vw;
+  height: 350px;
+  padding: 5rem;
   background-color: $grey;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  min-width: 10rem;
-  min-height: 10rem;
+  &--center {
+    align-self: center;
+    position: static;
+    border-radius: $card__border-radius;
+  }
+
+  &--right {
+    align-self: flex-end;
+    right: calc(-1 * $main__padding);
+    border-radius: $card__border-radius 0 0 $card__border-radius;
+  }
+
+  &--left {
+    align-self: flex-start;
+    left: calc(-1 * $main__padding);
+    border-radius: 0 $card__border-radius $card__border-radius 0;
+  }
 }
